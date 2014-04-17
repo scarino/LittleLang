@@ -7,7 +7,7 @@ Example
 -------
 
 <pre><code>
-	add a b { 
+add a b { 
  a b + 
 }
 
