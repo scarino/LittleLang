@@ -68,15 +68,39 @@ public class Function {
             else if(step.equals("print")){
                 System.out.println(stack.pop());
             }
-            else if(step.equals("zero?")){
+            else if(step.equals("eq?")){
                 Number top = stack.pop();
                 if((Integer)top != 0){
                     while(!steps.get(i).equals("done")){i++;}
                 }
             }
-            else if(step.equals("nonzero?")){
+            else if(step.equals("neq?")){
                 Number top = stack.pop();
                 if((Integer)top == 0){
+                    while(!steps.get(i).equals("done")){i++;}
+                }
+            }
+            else if(step.equals("gt?")){
+                Number top = stack.pop();
+                if((Integer)top <= 0){
+                    while(!steps.get(i).equals("done")){i++;}
+                }
+            }
+            else if(step.equals("gte?")){
+                Number top = stack.pop();
+                if((Integer)top < 0){
+                    while(!steps.get(i).equals("done")){i++;}
+                }
+            }
+            else if(step.equals("lte?")){
+                Number top = stack.pop();
+                if((Integer)top > 0){
+                    while(!steps.get(i).equals("done")){i++;}
+                }
+            }
+            else if(step.equals("lt?")){
+                Number top = stack.pop();
+                if((Integer)top >= 0){
                     while(!steps.get(i).equals("done")){i++;}
                 }
             }
